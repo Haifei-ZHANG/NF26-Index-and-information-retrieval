@@ -1,0 +1,227 @@
+#### Listing des corriges des exercices du TD introduction au langage Perl
+
+############ Exercice 1 ###########
+#!/usr/local/bin/perl
+
+$numligne = 1;
+while (defined($ligne=<STDIN>)) {	# lit la prochaine ligne
+	print "$numligne \t $ligne";	# imprime le numero, suivi d'une
+					# tabulation, suivi de la ligne
+	$numligne++; 	}		# incremente le numero de ligne
+
+##### Utilisation : TDPerl00_1.pl < sa_b.tei
+
+##### Autres solutions :
+
+$numligne = 1;
+while (defined($ligne=<>)) {		# on utilise l'operateur diamant
+	print "$numligne \t $ligne";
+	$numligne++; 	}
+
+#### Utilisation : TDPerl00_1.pl sa_b.tei
+
+$numligne = 1;
+while (<>) {			# on utilise l'operateur diamant et la
+				# variable implicite $_
+ 	print "$numligne \t $_";
+	$numligne++; 	}
+
+#### Utilisation : TDPerl00_1.pl sa_b.tei
+
+#### Listing Propose par Degremont-Delaruelle
+#!/usr/bin/perl -w
+use strict;
+my $linecount = 1;
+# read file
+print $linecount++ . ': ' . $_ while(<>);
+
+
+
+############# Exercice 2 ##########
+
+#!/usr/local/bin/perl
+
+while (defined($ligne=<STDIN>)) {	# lit la prochaine ligne
+	if ($ligne=~/^<bibl/) {	# teste si la ligne debute par l'expression
+				# reguliere <bibl
+		$compteur++;	# oui, on increment le compteur
+		}
+	}
+print "il y a $compteur r¨¦f¨¦rences\n";	# imprime le resultat
+
+#### Utilisation : TDPerl00_2.pl < sa_b.tei
+
+#### Autres solutions :
+ while (<>) {		# on utilise l'operateur diamant et la variable $_
+	if (/^bibl/) { $compteur++}	# teste si $_ debute par l'expression
+				# reguliere <bibl et increment le compteur
+	} print "il y a $compteur references\n";
+
+#### Utilisation : TDPerl00_2.pl sa_b.tei
+
+#### Listing Propose par Degremont-Delaruelle
+#!/usr/bin/perl -w
+# the one-liner
+print "nb de <bibl> : " . scalar( grep(/^<bibl.*>/, <>) ) . "\n";
+
+
+########## Exercice 3 ###############
+
+#!/usr/local/bin/perl
+
+$rech = $ARGV[0];	# saisit le premier argument de la ligne de commande
+while ($ligne=<STDIN>) { 	#lit la prochaine ligne
+	while ($ligne=~/<$rech[^>]*>(.+?)<\/$rech>/g){
+# l'option g a la fin de la ligne permet de continuer la recherche
+# de l'expression reguliere meme apres un premier succes
+# cette option sera utile pour resoudre le probleme des <title> multiples
+# sur une ligne.
+# l'expression "[^>]*>" permet de traiter correctement les balises avec
+# parametre (voir <title>, par exemple). L'expression ".+?" permet d'etre
+# non-gourmand lorsqu'une balise apparait plusieurs fois (voir <title>).
+ 		print "$1\n";
+		}
+	}
+
+#### Utilisation : TDPerl00_3.pl author <sa_b.tei
+
+#### Autres solutions
+
+#!/usr/local/bin/perl
+
+$rech = $ARGV[0];
+while (defined($_=<STDIN>)) {
+	while ($_=~/<$rech[^>]*>(.+?)<\/$rech>/g){
+		print "$1\n";
+		}
+	}
+#### Utilisation : TDPerl00_3.pl author <sa_b.tei
+## ou encore
+
+#!/usr/local/bin/perl
+
+$rech = $ARGV[0];
+while (<STDIN>) {
+	while (/<$rech[^>]*>(.+?)<\/$rech>/g){
+		print "$1\n";
+		}
+	}
+#### Utilisation : TDPerl00_3.pl author <sa_b.tei
+## ou encore
+
+$rech = shift(@ARGV);	# lit la premiere valeur de @ARGV et la
+			# supprime du tableau
+			# autrement l'instruction suivante lirait
+			# le nom de balise donne comme argument comme
+			# si c'etait un nom de fichier et generait un
+			# message d'erreur
+while(<>)
+	while (/<$rech[^>]*>(.+?)<\/$rech>/g){
+		print "$1\n";
+		}
+	}
+#### Utilisation : TDPerl00_3.pl author sa_b.tei
+
+#### Listing Propose par Degremont-Delaruelle
+#!/usr/bin/perl -w
+use strict;
+# fetch tag name
+my $tagname;
+$tagname = shift(@ARGV) or die("Usage: $0 tagname filename\n");
+my $data = join('', <>);
+# extract data
+print "$2\n" while ($data =~ /<$tagname( .+?)?>(.*?)<\/$tagname>/sg);
+
+
+########### Exercice 4 #############
+#!/usr/local/bin/perl
+
+while (<>){
+	chomp;		# supprime le dernier caract¨¨re (retour chariot)
+	s/>[^<]+</></g;	# ¨¦limine le texte plac¨¦ entre deux balises
+	s/></%/g;	# remplace >< par %
+	s/ [^%]+%/%/g;	# ¨¦limine les attributs ¨¦ventuels de la balise
+	s/[\/<>\t]//g;	# ¨¦limine les caract¨¨res ind¨¦sirables
+			# en effet, seules les expressions >< on ¨¦t¨¦ remplac¨¦es
+			# par %, mais les balises initiales <lisBibl> et
+			# finales </listBilbl> ainsi que celles de d¨¦but et
+			# de fin de ligne n'ont pas ete trait¨¦es. Il reste
+			# enfin toutes les "/balises" de fermeture.
+
+	@liste=split(/%/);	# construit le tableau des balises
+	foreach $i(@liste){
+		$ind{$i} = 1;	# construit un tableau assoc. des balises
+		}
+	}
+@res=sort keys %ind;	# trie les cles par ordre alphabetique
+print"liste des balises tri¨¦es : \n@res\n";
+
+### Utilisation : TDPerl00_4.pl sa_b.tei
+
+## ou encore
+#!/usr/local/bin/perl
+
+%tab;				#tableau associatif : cle = nom de balise, valeur = nb d'occurences
+
+while ($ligne = <>)		# tant qu'il a encore une ligne dans le fichier passe en parametre d'appel de la fonction
+{
+  $ligne =~ s/>(.*?)</></g;	#retire tout le texte compris entre 2 balises
+  $ligne =~ s/<\/(.+?)>//g;	# retire toutes les balises fermantes du texte
+  $ligne =~ s/<(.+?)\s(.+?)>/<$1>/g; # retire toutes les balises epurees de leur eventuels arguments
+  #print "$ligne\n";
+
+  while ($ligne =~ /<(.+?)>/g) {	# lit tout ce aui se trouve entre chevron. Le ? permet de parcourir la ligne 1 balise a la fois
+	$tab{$1}++;			# ajoute la cle dans la table des cles, si elle n'y est pas et incremente le compteur associe
+  }
+}
+
+@cles = keys(%tab);		# recupere la liste des cles
+@cles = sort (@cles);		# trie la liste des cles
+
+foreach $elt (@cles) {		# affichage
+	print "$elt \n";
+}
+
+
+# Solution proposee par Benjamin PIAT et Olivier HOAREAU
+
+#! /usr/local/bin/perl -w
+
+# on cree un tableau associatif contenant en cle les noms des balises rencontrees dans le
+# fichier passe en argument.
+
+# on va reperer pour chaque ligne du fichier les chaines de caracteres contenant
+# l'expression '<nom_balise' (on bloque sur les caracteres '>', ' ', '/').
+
+while(<>){
+  while($_ =~ /<([^> \/]*)>/g){
+      $tags{$1}=1;
+  }
+}
+
+# attention : l'affichage tient compte de la casse, les majuscules
+# sont donc classees avant les minuscules.
+foreach $_ (sort keys(%tags)){
+  print $_."\n";
+}
+
+#### Listing Propose par Degremont-Delaruelle
+#!/usr/bin/perl -w
+use strict;
+my $data = join('', <>);
+my %taglist = ();
+# extract data
+$taglist{$1}++ while ($data =~ /<(\w+)( .+?)?>/gs);
+# print extracted list
+print join("\n", sort(keys(%taglist))), "\n";
+
+#### Solution propos¨¦e par Lefevre et Mantelet
+#!/usr/bin/perl
+
+while(<>){
+	while (/<([^\/>\s\n]*)[^>]*>/g){
+		$tab{$1}++;
+	}
+}
+@balises = sort(keys(%tab));
+print "R¨¦sultat:\n@balises";
