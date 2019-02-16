@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+     version="2.4">
+ 
+
+   <display-name>Test Tomcat</display-name>
+   <description>
+      Test de Tomcat pour lo17
+   </description>
+
+     <servlet>
+         <servlet-name>LanceRequete</servlet-name>
+         <servlet-class>LanceRequete</servlet-class>
+     </servlet>
+     <servlet>
+         <servlet-name>ChoisirLemme</servlet-name>
+         <servlet-class>ChoisirLemme</servlet-class>
+     </servlet>
+
+     <servlet-mapping>
+         <servlet-name>LanceRequete</servlet-name>
+         <url-pattern>/servlet/LanceRequete</url-pattern>
+     </servlet-mapping>
+         <servlet-mapping>
+         <servlet-name>ChoisirLemme</servlet-name>
+         <url-pattern>/servlet/ChoisirLemme</url-pattern>
+     </servlet-mapping>
+
+</web-app>
