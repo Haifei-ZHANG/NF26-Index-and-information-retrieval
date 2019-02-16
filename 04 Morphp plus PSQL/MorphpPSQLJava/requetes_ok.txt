@@ -1,0 +1,122 @@
+Affiche l'article dont le numéro est 290
+Affiche le nombre d’articles qui ont pour rubrique événement.
+#Affiche les articles de la rubrique Focus datant du 1er janvier.
+$Affiche les articles qui concernent l'hydrographie ou l'océanographie.
+Afficher la liste des articles de la rubrique Actualité Innovation
+Afficher la liste des articles de la rubrique en direct des laboratoires.
+afficher la liste des articles de la rubrique Focus
+Afficher la liste des articles qui parlent de cybercriminalité
+Afficher la liste des articles qui parlent des systèmes embarqués dans la rubrique Horizons Enseignement
+afficher l'article Numéro 252.
+Afficher les articles de la rubrique A lire.
+Afficher les articles de la rubrique Au cœur des régions et qui ont pour numéro 27
+#Afficher les articles de la rubrique Evènement ou Focus de 2010
+Afficher les articles de la rubrique Focus.
+Afficher les articles qui parlent d’économie ou de l’Europe
+#Articles écrits en Décembre 2012 qui parlent de l’environnement ?
+#Articles parlant de molécules.
+#Articles parlant d'innovation
+#Articles parlant d'université.
+#Article traitant des Serious Game et de la réalité virtuelle
+Combien d’articles appartenant aux rubriques Focus et Au coeur des régions évoquent le vin ?
+Combien d’articles ont été publiés au mois décembre ?
+/!\combien d’articles ont été publiés dans la rubrique Focus
+Combien d’articles parlant de Robotique ont pour Rubrique « Focus » ?
+Combien d'articles parlent de l'Afrique ?
+#Combien d'articles traitent un thème historique et ont été écrit en 2013 ?
+Combien de rubriques différentes évoquent l’intelligence artificielle ?
+#Combien y a t-il d'articles dans la rubrique Evénement en mars 2014 ?
+#Combien y a t'il d'articles parlant de nanotechnologies en 2011 ?
+$combien y atil d’articles portant à la fois sur les nanotechnologies et les microsatellites
+Dans quels bulletins se trouvent les articles parlant de drones ?
+Donner les articles qui parlent d’apprentissage et de la rubrique Horizons Enseignement.
+#Donner les articles qui sur l’alimentation de l’année 2013.
+Donnez-moi des articles parus au 21 juin 2011.
+#Donnez-moi les articles publiés le 30/08/2011.
+Donnez-moi les articles qui parlent des bioénergies.
+?Ecol Central ua Marauque
+##j’aimerais avoir la liste des rubriques de tous les bulletins publiés en Mars 2011
+j’aimerais avoir le nombre d’articles du bulletin 368
+#J'aimerais la liste des numéros de bulletin écrit après janvier 2014 et qui parlent d'informatique ou
+J'aimerais les articles parus en Novembre 2012 dans la rubrique "Evénement".
+Je cherche des articles sur les avions
+Je cherche le nombre d'articles parus en juin 2014.
+Je cherche les articles à propos des fleurs ou des arbres.
+Je cherche les articles du thème Changement climatique
+#Je cherche les articles provenant de la rubrique en direct des laboratoires
+Je cherche les articles qui parlent des alimentations ou des agricultures.
+#Je cherche les évènements traitant de chimie
+Je cherche les recherche sur l’aéronautique
+##Je souhaite les rubriques des articles parlant de nutrition ou de vins.
+#Je souhaites avoir tout les articles donc la rubrique est focus ou Actualités Innovations et qui contiennent les mots chercheurs et paris.
+#Je veux des etudes sur l’education
+Je veux les articles de 2012 qui parlent de l'écologie en France
+Je veux les articles de 2014 et de la rubrique Focus et parlant de la santé.
+#Je veux les articles de la rubrique focus de février 2014.
+Je veux les articles de la rubrique Focus parlant d’innovation.
+Je veux les articles parlant de l'Argentine ou du Brésil.
+Je veux les articles parlant de Neurobiologie
+Je veux les articles parus en juin 2011.
+Je veux les articles qui a le numéro 291 dans la rubrique "Du côté des pôles".
+Je veux les articles qui parlent d'écologie.
+Je veux les articles qui parlent de la « biologie ».
+Je veux les articles qui parlent de « l’hydravion ».
+Je veux les articles qui parlent du fauteuil roulant et qui ont pour rubrique « Actualité Innovation ».
+Je veux les articles qui parlent du sénégal
+Je veux les articles qui parlent "philosophie".
+Je veux les articles qui sont écrits en 2012 et parlent du « chrono-environnement ».
+Je veux les articles qui traitent du climat et de l'espace.
+Je veux les articles sur les énergies renouvelables.
+# #Je veux les dates et les rubriques des articles parus en 2013.
+Je veux savoir le nombre des articles dans la rubrique "Actualité innovation".
+Je veux voir les articles qui parlent du projet Nu-Age
+Je voudrais la liste des articles écrits en 2013.
+Je voudrais la liste des articles qui est dans la rubrique "Focus".
+je voudrais le nombre d’articles publiés en Novembre 2011
+#Je voudrais les articles de 2011 sur l’enseignement.
+#je voudrais les articles de la rubrique Focus mentionnant un laboratoire
+je voudrais les articles qui contiennent les mots Ecole et Polytechnique
+Je voudrais les articles qui datent de 1 décembre 2012 et dont la rubrique est Actualités Innovations
+#Je voudrais les articles qui parlent d’airbus ou du projet Taxibot
+Je voudrais les articles qui parlent d’alimentation
+#Je voudrais les articles qui parlent de cuisine moléculaire
+Je voudrais les articles qui parlent d'innovation
+Je voudrais les articles qui parlent du tennis.
+#Je voudrais les bulletins parus en 2012 ayant trait à la météo.
+#je voudrais les numéros des articles publiés dans le bulletin 226
+Listez-moi les articles écrits en 2013, qui ont pour rubrique « Du côté des pôles » et qui parlent du « CTPS ».
+Listez-moi les articles qui parlent de « agro écologie » ou du « microorganisme ».
+Listez-moi tous les articles écrits en 2012.
+Listez-moi tous les articles qui ont pour rubrique « Événement ».
+Nous souhaitons obtenir les articles du mois de Juin 2013, parlant du cerveau.
+Nous voulons des articles parlant de smartphones.
+Quel est l’article numéro 75792 ?
+Quel est le nombre d’articles de la rubrique Focus ?
+Quels articles évoquent la ville de Grenoble ?
+Quels articles Évoquent le CNRS ?
+#Quels articles parlent d'aviation et ont été publiés en 2015 ?
+Quels articles parlent de la France et de l'Allemagne ?
+Quels articles parlent de réalietté virtuelle ?
+Quels est le bulletin publié en Juin 2013 ?
+Quel sont les articles qui datent de 20 juin 2014 ?
+Quels sont les articles contenant les mots " voitures " et " électrique" ?
+#Quels sont les articles datant du 03/04/2012 ?
+Quels sont les articles de la rubrique évènement qui parlent de la ville de Paris ?
+Quels sont les articles parlant de la Russie ou du Japon ?
+#Quels sont les articles parlant de projet européen de l’année 2014 ?
+Quels sont les articles parlant de vin ?
+##Quels sont les articles possédant le mot « France » ?
+#quels sont les articles publiés au mois de novembre 2011 portant sur de la recherche
+#Quels sont les articles qui concernent le nucléaire ?
+Quels sont les articles qui parlent d'écologie ?
+Quels sont les articles qui parlent d’économie ?
+Quels sont les articles qui parlent de microbiologie ?
+Quels sont les articles qui parlent des robots et des chirurgiens ?
+Quels sont les articles qui parlent de technologies 3D
+#Quels sont les articles qui parlent d’innovations technologiques ?
+Quels sont les articles sur la réalité virtuelle ?
+Quels sont les articles traitant d’informatique ou de reseaux
+?Quels sont les numéros des bulletins dont tous les articles citent des entreprises américaines ?
+Tous les articles dont la rubrique est "En direct des laboratoires" ou "Focus" et qui évoquent la médecine.
+#Trouver les articles Écrits en Novembre.
+Trouver les articles qui mentionnent Fink.
